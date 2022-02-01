@@ -24,7 +24,7 @@ public class ButtonChange : MonoBehaviour
             {
                 isPressed = false;
                 //GameManager.instance.GameRetry();
-                ChangeItem();
+                //ChangeItem();
                 googleAD.MyLoadAD();
             }
             else

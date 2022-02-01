@@ -41,12 +41,13 @@ public class GoogleMobileAdsReward : MonoBehaviour
     {
         string adUnitId;
 #if UNITY_ANDROID
-        adUnitId = "ca-app-pub-3940256099942544/5224354917";  // test ID
+        //adUnitId = "ca-app-pub-3940256099942544/5224354917";  // test ID
+        adUnitId = "ca-app-pub-8612026417340004/2651154195";
 
 #elif UNITY_IPHONE
-                    adUnitId = "ca-app-pub-3940256099942544/1712485313";
+        adUnitId = "ca-app-pub-3940256099942544/1712485313";
 #else
-                    adUnitId = "unexpected_platform";
+        adUnitId = "unexpected_platform";
 #endif
         this.rewardedAd = new RewardedAd(adUnitId);
 
@@ -85,7 +86,6 @@ public class GoogleMobileAdsReward : MonoBehaviour
         MonoBehaviour.print(
             "HandleRewardedAdFailedToLoad event received with message: "
                              + args.Message);
-
     }
 
     public void HandleRewardedAdOpening(object sender, EventArgs args)
@@ -95,12 +95,9 @@ public class GoogleMobileAdsReward : MonoBehaviour
 
     public void HandleRewardedAdFailedToShow(object sender, AdErrorEventArgs args)
     {
-        /*
         MonoBehaviour.print(
             "HandleRewardedAdFailedToShow event received with message: "
                              + args.Message);
-        */
-
     }
 
     public void HandleRewardedAdClosed(object sender, EventArgs args)
